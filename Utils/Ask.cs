@@ -66,6 +66,22 @@ namespace Utils
             }
         }
 
+        public static void ParseOrAskBooleanValue(string text, ref bool variable, int requiredArgIndex = -1, string[]? args = null)
+        {
+            if (args == null || args.Length == 0 || requiredArgIndex >= 0 && args.Length >= requiredArgIndex + 1 && !Boolean.TryParse(args[requiredArgIndex], out variable))
+            {
+                while (true)
+                {
+                    var specifiedBoolStr = AskStringForUser(text);
+                    if (Boolean.TryParse(specifiedBoolStr, out variable))
+                        break;
+
+                    Console.WriteLine($"Parse to boolean failed" + newLineStr + "Please enter it again");
+                    Console.WriteLine();
+                }
+            }
+        }
+
         public static string ParseOrAskAndValidPath(bool isFile, string text, int requiredArgIndex = -1, string[]? args = null)
         {
             var path = "";
