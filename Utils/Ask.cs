@@ -76,7 +76,7 @@ namespace Utils
                     if (Boolean.TryParse(specifiedBoolStr, out variable))
                         break;
 
-                    Console.WriteLine($"Parse to boolean failed" + newLineStr + "Please enter it again");
+                    Console.WriteLine("Parse to boolean failed" + newLineStr + "Please enter it again");
                     Console.WriteLine();
                 }
             }
