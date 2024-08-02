@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <Choose>
-  	<When Condition=" '$(Configuration)'=='Release' ">
-  		<PropertyGroup>
-  			<DebugSymbols>false</DebugSymbols>
-  			<DebugType>None</DebugType>
-  		</PropertyGroup>
-  	</When>
+    <When Condition=" '$(Configuration)'=='Release' ">
+      <PropertyGroup>
+        <DebugSymbols>false</DebugSymbols>
+        <DebugType>None</DebugType>
+      </PropertyGroup>
+    </When>
   </Choose>
 
 </Project>
