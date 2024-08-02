@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <Choose>
+  	<When Condition=" '$(Configuration)'=='Release' ">
+  		<PropertyGroup>
+  			<DebugSymbols>false</DebugSymbols>
+  			<DebugType>None</DebugType>
+  		</PropertyGroup>
+  	</When>
+  </Choose>
+
 </Project>
